@@ -13,7 +13,7 @@ $(document).ready(function () {
 
 function getGames(all) {
     $.ajax({
-        url: "http://bgg-json.azurewebsites.net/hot",
+        url: "https://bgg-json.azurewebsites.net/hot",
         dataType: "jsonp",
         data: { limit: 50 },
         success: function (response) {
