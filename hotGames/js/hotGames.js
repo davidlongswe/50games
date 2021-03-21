@@ -27,11 +27,12 @@ function getGames(all) {
                     numberOfGames++;
                 });
             } else {
-                items = [], i = 0, numberOfGames = 0;
+                items = [], i = 0, numberOfGames = 0, rank = 1;
                 $.each(response, function () {
                     if (response[i].yearPublished <= 2020) {
-                        items.push(`<article><h2>${response[i].rank}</h2><h2>${response[i].name}</h2><p>Publicerat: ${response[i].yearPublished} </p><img src=${response[i].thumbnail}></article>`);
+                        items.push(`<article><h2>${rank}</h2><h2>${response[i].name}</h2><p>Publicerat: ${response[i].yearPublished} </p><img src=${response[i].thumbnail}></article>`);
                         numberOfGames++;
+                        rank++;
                     }
                     i++;
                 });
