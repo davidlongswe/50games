@@ -1,3 +1,5 @@
+$("#showAll").click();
+
 $(document).ready(function () {
     $("#showAll").on("click", function () {
         getGames(true);
@@ -5,6 +7,8 @@ $(document).ready(function () {
     $("#onlyPublished").on("click", function () {
         getGames(false);
     });
+
+    $("#showAll").click();
 });
 
 function getGames(all) {
