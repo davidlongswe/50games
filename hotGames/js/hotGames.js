@@ -1,13 +1,9 @@
-const published = document.getElementById("onlyPublished");
-const nrOfGames = document.getElementById("noOfGames");
-
-published.addEventListener("click", () => {
-    getGames(false);
-});
-
 $(document).ready(function () {
     $("#showAll").on("click", function () {
         getGames(true);
+    });
+    $("#onlyPublished").on("click", function () {
+        getGames(false);
     });
 });
 
@@ -37,7 +33,7 @@ function getGames(all) {
                 });
             }
             $("#games").html(items.join(""));
-            nrOfGames.innerHTML = numberOfGames;
+            $("#noOfGames").html(numberOfGames);
         }
     });
 };
